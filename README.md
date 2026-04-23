@@ -32,14 +32,14 @@ Current release info
 Installing azure-purview-scanning
 =================================
 
-Installing `azure-purview-scanning` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `azure-purview-scanning` from the `conda-forge/label/azure-purview-scanning_rc` channel can be achieved by adding `conda-forge/label/azure-purview-scanning_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/azure-purview-scanning_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `azure-purview-scanning` can be installed with `conda`:
+Once the `conda-forge/label/azure-purview-scanning_rc` channel has been enabled, `azure-purview-scanning` can be installed with `conda`:
 
 ```
 conda install azure-purview-scanning
@@ -54,26 +54,26 @@ mamba install azure-purview-scanning
 It is possible to list all of the versions of `azure-purview-scanning` available on your platform with `conda`:
 
 ```
-conda search azure-purview-scanning --channel conda-forge
+conda search azure-purview-scanning --channel conda-forge/label/azure-purview-scanning_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search azure-purview-scanning --channel conda-forge
+mamba search azure-purview-scanning --channel conda-forge/label/azure-purview-scanning_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search azure-purview-scanning --channel conda-forge
+mamba repoquery search azure-purview-scanning --channel conda-forge/label/azure-purview-scanning_rc
 
 # List packages depending on `azure-purview-scanning`:
-mamba repoquery whoneeds azure-purview-scanning --channel conda-forge
+mamba repoquery whoneeds azure-purview-scanning --channel conda-forge/label/azure-purview-scanning_rc
 
 # List dependencies of `azure-purview-scanning`:
-mamba repoquery depends azure-purview-scanning --channel conda-forge
+mamba repoquery depends azure-purview-scanning --channel conda-forge/label/azure-purview-scanning_rc
 ```
 
 
@@ -95,7 +95,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance

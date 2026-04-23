@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-purview-scanning-{{ version }}.zip
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure-purview-scanning-{{ version }}.zip
   sha256: 82d9cccd9e3ddc93a7c4fe3353cc5dc359beae7596aea75ca959fe69f8dc9171
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.0
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.0
+    - python >={{ python_min }}
     - azure-core <2.0.0,>=1.18.0
     - msrest >=0.6.21
     - six >=1.11.0
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Azure/azure-sdk-for-python
